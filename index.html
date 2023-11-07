@@ -186,13 +186,11 @@ p code
 
 <div class="content">
 
-<h1>Master of All: Simultaneous Generalization of Urban-Scene Segmentation to All Adverse Weather Conditions</h1>
+<h1>Towards Domain-Aware Knowledge Distillation for Continual Model Generalization</h1>
 <p id="authors">
 <a href=mailto:nikhil.jangamreddy@uqidar.iitd.ac.in>Nikhil Reddy</a><sup>a,b</sup> 
-<a href="">Abhinav Singhal</a><sup>a </sup> 
-<a href="">Abhishek kumar</a><sup>a </sup> 
 <a href="">Mahsa Baktashmotlagh</a><sup>b </sup> 
-<a href="https://www.cse.iitd.ac.in/~chetan/">Chetan Arora</a><sup>a </sup> 
+<a href="">Chetan Arora</a><sup>a </sup> 
 <br>
 <br>
 <sup> a </sup> Indian Institute of Technology, Delhi <br>
@@ -203,10 +201,10 @@ p code
 <a href="./mall-iitd/architechture.jpg"><img src="./mall-iitd/architechture.jpg" width="400px" border="2"></a>
 </div>
 
-<p>Computer vision systems for autonomous navigation must generalize well in adverse weather and illumination conditions expected in the real world. However, semantic segmentation of images captured in such conditions remains a challenging task for current state-of-theart (SOTA) methods trained on broad daylight images, due to the associated distribution shift. On the other hand, domain adaptation techniques developed for the purpose rely on the availability of the source data, (un)labeled target data and/or its auxiliary information (e.g., GPS). Even then, they typically adapt to a single(specific) target domain(s). To remedy this, we propose a novel, fully test time, adaptation technique, named Master of ALL (MALL), for simultaneous generalization to multiple target domains. MALL learns to generalize on unseen adverse weather images from multiple target domains directly at the inference time. More specifically, given a pre-trained model and its parameters, MALL enforces edge consistency prior at the inference stage and updates the model based on (a) a single test sample at a time (MALL-sample), or (b) continuously for the whole test domain (MALL-domain). Not only the target data, MALL also does not need access to the source data and thus, can be used with any pre-trained model. Using a simple model pre-trained on daylight images, MALL outperforms specially designed adverse weather semantic segmentation methods, both in domain generalization and testtime adaptation settings. Our experiments on foggy, snow, night, cloudy, overcast, and rainy conditions demonstrate the target domain-agnostic effectiveness of our approach. We further show that MALL can improve the performance of a model on an adverse weather condition, even when the model is already pre-trained for the specific condition.
-</p>
+<p>Generalization on unseen domains is critical for Deep Neural Networks (\dnns) to perform well in real-world applications such as autonomous navigation. 
+    However, catastrophic forgetting limits the ability of domain generalization and unsupervised domain adaption approaches to adapt to constantly changing target domains. To overcome these challenges, We propose \texttt{DoSe}\xspace framework, a \textbf{Do}main-aware \textbf{Se}lf-Distillation method based on batch normalization prototypes to facilitate continual model generalization across varying target domains. Specifically, we enforce the consistency of batch normalization statistics between two batches of images sampled from the same target domain distribution between the student and teacher models. To alleviate catastrophic forgetting, we introduce a novel exemplar-based replay buffer to identify difficult samples for the model to retain the knowledge.  Specifically, we demonstrate that identifying difficult samples and updating the model periodically using them can help in preserving knowledge learned from previously seen domains. We conduct extensive experiments on two real-world datasets ACDC, C-Driving, and one synthetic dataset SHIFT to verify the efficiency of the proposed \texttt{DoSe}\xspace framework. On ACDC, our method outperforms existing \SOTA in Domain Generalization, Unsupervised Domain Adaptation, and Daytime settings by $26\%$, $14\%$, and $70\%$ respectively.</p>
 
-<p><a href="./mall-iitd/4043.pdf" target="_blank">Paper</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="./mall-iitd/4043-supp.pdf" target="_blank">Supplementary</a></p>
+<p><a href="./mall-iitd/4043.pdf" target="_blank">Paper</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="./mall-iitd/4043-supp.pdf" target="_blank">Supplementary</a> <a href="./mall-iitd/4043-supp.pdf" target="_blank">code</a></p>
 
 
 <br clear="all">
